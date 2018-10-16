@@ -25,7 +25,7 @@ Note:
 =====
 
 it has private and publickey as below . In https://github.com/settings/keys copy this publickey from /home/.ssh/id_rsa.
-and paste in github profile. it works!!!
+and paste in github profile. now it able to handleshake between local and remote git through gitcvs client. it works!!!
 
     /home/arun/.ssh> ls -l
         -rw------- 1 admin  770 Oct 16 20:26 authorized_keys
