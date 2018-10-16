@@ -24,14 +24,15 @@ to connect to git using ssh keys.
 Note:
 =====
 
-it has private and publickey in https://github.com/settings/keys copy this publickey from /home/.ssh/id_rsa.
+it has private and publickey as below . In https://github.com/settings/keys copy this publickey from /home/.ssh/id_rsa.
 and paste in github profile. it works!!!
 
-    /home/arun/.ssh> ls
-         id_rsa	 - private key
-         authorized_keys2  
-         id_rsa.pub - public keys
-
+    /home/arun/.ssh> ls -l
+        -rw------- 1 admin  770 Oct 16 20:26 authorized_keys
+        -rw------- 1 admin 770 Oct 16 20:26 authorized_keys2
+        -rw------- 1 admin 3434 Oct 16 20:33 id_rsa
+        -rw-r--r-- 1  admin  753 Oct 16 20:33 id_rsa.pub
+        -rw-r--r-- 1 admin 1106 Oct 16 20:36 known_hosts
 
 $
 $ cat ~/.ssh/id_rsa.pub
