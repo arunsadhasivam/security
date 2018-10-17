@@ -11,7 +11,10 @@ STEP 1:
 command:
 =======
 
-  arun@home$ eval `ssh-agent -s`
-  arun@home$ssh-add
-  Enter passphrase for /home/arun/.ssh/id_rsa: 
-  Identity added: /home/arun/.ssh/id_rsa (/home/arun/.ssh/id_rsa)
+    arun@home$ eval `ssh-agent -s`
+  
+    arun@home$ssh-add
+  
+    Enter passphrase for /home/arun/.ssh/id_rsa: 
+  
+    Identity added: /home/arun/.ssh/id_rsa (/home/arun/.ssh/id_rsa)
