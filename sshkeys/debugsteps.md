@@ -14,6 +14,6 @@ arun$>cat  ~./home/arundevbox/.ssh/known_hosts.
 check the pubic key in /home/arundevbox/.ssh/id_rsa.pub matches the publickey in https://github.com/settings/keys 
 of your github public profile. yes below accessRights error will come.
 
-Cloning into '/home/arundevbox/repository'...
-Permission denied (publickey).
-fatal: Could not read from remote repository.
+        Cloning into '/home/arundevbox/repository'...
+        Permission denied (publickey).
+        fatal: Could not read from remote repository.
