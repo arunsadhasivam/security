@@ -31,7 +31,7 @@ to connect to git using ssh keys.
   
   Note: it is important to map instance to key to work correctly.
   
-  $ ssh-add ~/.ssh/id_rsa
+        $ ssh-add ~/.ssh/id_rsa
   
   
 
