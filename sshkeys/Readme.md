@@ -20,6 +20,30 @@ to connect to git using ssh keys.
               Enter passphrase (empty for no passphrase): 
               Enter same passphrase again: 
               Your identification has been saved in /home/.ssh/id_rsa.
+              
+     
+     
+    Adding a Key to the SSH Agent
+    ===============================
+
+  An ssh agent allows you to avoid typing in the password for your private key. OS X has a built-in ssh agent.
+  Add your newly created key with the following command and supply your passphrase when prompted. 
+  
+  Note: it is important to map instance to key to work correctly.
+  
+  $ ssh-add ~/.ssh/id_rsa
+  
+  
+
+ Important:
+ ==========
+ Afer executing below command it show below result , to confirm mapping done..
+ 
+  $ ssh-add ~/.ssh/id_rsa
+
+ Identity added: ~/.ssh/id_rsa successfully!!!
+
+if " Identity Added sucessfully" message confirms mapping with local to remote established.
 
 Note:
 =====
