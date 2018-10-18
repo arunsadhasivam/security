@@ -39,7 +39,7 @@ to connect to git using ssh keys.
  ==========
  Afer executing below command it show below result , to confirm mapping done..
  
-  $ ssh-add ~/.ssh/id_rsa
+     $ ssh-add ~/.ssh/id_rsa
 
  Identity added: ~/.ssh/id_rsa successfully!!!
 
