@@ -8,6 +8,26 @@ debug:
 
 arun$ eval "$(ssh-agent -s)"
 
+arun$ ssh -v arundevbox
+
+        debug1: Offering public key: RSA SHA256:yJv1nj6k1z9YNm478AjW1iCNVONMZp+bYDunjXtDuy8 asadhasivam@asadhasivam-dbx
+        debug1: Authentications that can continue: publickey
+        debug1: Offering public key: RSA SHA256:60giddHdpYJ4HcjSknasKk0nCL7ET/x/UMQJS5uexMs asadhasivam@asadhasivam-mba.corp.dropbox.com
+        debug1: Authentications that can continue: publickey
+        debug1: Trying private key: /home/arun/.ssh/id_rsa
+        debug1: Trying private key: /home/arun/.ssh/id_dsa
+        debug1: Trying private key: home/arun/.ssh/id_ecdsa
+        debug1: Trying private key: /home/arun/id_ed25519
+        
+To get more verbose:
+====================
+
+arun$ ssh -v arundevbox
+
+arun$ ssh -vv arundevbox
+
+
+
 
 
 
