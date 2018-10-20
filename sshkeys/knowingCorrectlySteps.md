@@ -79,7 +79,17 @@ Identity added: /home/arun/.ssh/id_rsa (arundevbox)
           # 10.1.1.28:22 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.4  
 
 //onlly ip addresss is working
-//if i use ssh-keyscan -H arundevbox >> ~/.ssh/known_hosts it is not working.
+//if i use ssh-keyscan -H arundevbox >> ~/.ssh/known_hosts   also works
+
+        asadhasivam$ ssh-keyscan -H arundevbox >> /home/arun/.ssh/known_hosts
+        # asadhasivam-dbx:22 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.4
+        # asadhasivam-dbx:22 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.4
+        # asadhasivam-dbx:22 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.4
+
+Note:
+=====
+
+make sure space arundevbox >> /home/arun/.ssh/known_hosts
 
 Step3:
 ======
