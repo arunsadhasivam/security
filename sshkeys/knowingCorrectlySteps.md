@@ -89,7 +89,7 @@ Identity added: /home/arun/.ssh/id_rsa (arundevbox)
 Note:
 =====
 
-make sure space arundevbox >> /home/arun/.ssh/known_hosts
+make sure space between arundevbox >> /home/arun/.ssh/known_hosts
 
 Step3:
 ======
