@@ -2,6 +2,22 @@ Adding multiple SSH Configurations:
 ===================================
 
 If we need to have 2 config one for local connecting to remote server and one to connect to devbox:
+finally we deploy in to jenkins server from our devbox.
+
+Below steps worked!!!!
+
+if you need 2 ssh connections one for github.com and one for virtualbox to install the downloaded github.com
+
+then create 2 ssh rsa publickeys, private keys one for github and one for virtualbox.
+
+check any way to generate public keys for the virutalbox in local.
+
+if internet connection exists we can connect form localhost to github.com but for virtualbox we need the
+virtual box public key generated along with private key to make it work.
+
+copy the 2 public keys of github.com and public keys of devbox where we deploy our code and build 
+in to jenkins server where all code deployed by maven.
+https://github.com/settings/keys
 
 
 create 2 rsa publickeys:
