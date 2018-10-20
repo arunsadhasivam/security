@@ -124,3 +124,11 @@ parameters:
                 Lists public key parameters of all identities currently represented by the agent.
         -l
                 Lists fingerprints of all identities currently represented by the agent.
+                
+ E.g:
+ ====
+
+arun$ssh-add -L
+
+                ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDdL+nM3ZtkbJ7CcccroFjTaAaAwrEay/OvOxW0xknHvoLKlfoz1F9TBQnIduGwVhpPZ9U/lBNuep14fsJ72pLTVZ1q0wHCQOuHzu7iYN7AtpnI9TfGQaz4Ho4y8WRcjKvGBTMjRlCNGTPvgnu/0Kloa+C+3qJe42TbzNW1uySz/iXJNhCFEl/3Jl/ThBooB2jCL1hI6Ig0EQwuT0eahElLQW5kn53pq/pCOLety95SfPEPcP9HWXsNNLhaODRSEbEIwWOjuwlJYt16CWV8kOat1Jar13G6JyKA1iQF4ncy4ad+hXxp1U7u/ZBnkLZ24VOqGq273EjrMTPQzWj11VA/UuRRKCrgxeQcmLPwCvakjZhpeks2tPfWT0ds/9VKqDLtbrMtrywUPeRGl7u77pYZj3WHBgPU1HpIn4EcERJ5WghGCzDjDakQtwLx/3YR8Jv7FJ0/Knw0c6uyeTeeFDqwW6cMUCm2MxYHeHngXKZ15pTGLqygmymvh5e9mil0vP3mLL80YM7cDzuiHppCOay938f8NYBx0rH6nTrCeTVPfH7wee0tY6CrbErLHeVxTA37REEVUAS0DZvl2TxPdAPJNYVVQ/EKB7CUjUlSe8rD7Io/HfD1qwCnLP0RZGINnnFEGWgFD0wORIdIwR+NvBD8UUnxoKA0Fgdl4vBNPfEe5w== arundevbox@localhost
+
