@@ -3,6 +3,9 @@ Pre-requisites:
 
 make sure you have /home/arun/.ssh/config using standard template.
 
+
+
+
 debug:
 ======
 
@@ -101,3 +104,23 @@ NOTE:
 also if you want use ssh-ad
 
 ssh-add
+
+
+Available commands:
+====================
+
+        ssh          ssh-agent    ssh-keygen   sshd         
+        ssh-add      ssh-copy-id  ssh-keyscan  
+
+ssh-add
+=======
+
+ssh-add - adds private key identities to the authentication agent  
+
+
+parameters:
+============
+        -L-
+                Lists public key parameters of all identities currently represented by the agent.
+        -l
+                Lists fingerprints of all identities currently represented by the agent.
