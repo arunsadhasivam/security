@@ -1,31 +1,52 @@
 Adding multiple SSH Configurations:
 ===================================
 
-If we need to have 2 config one for local connecting to github  and one to connect to devbox:
+Objective - download code in local from github.com and download code to virtualbox from github.com 
+build and test in local and devbox env.
+
+If we need to have 2 config one for local connecting to github  and one for devbox connecting to github.com:
 finally we deploy in to devbox to test.
 
 Below steps worked!!!!
 
 if you need 2 ssh connections one for github.com  and one for virtualbox to install the downloaded github.com
 
-then create 2 ssh rsa publickeys, private keys one for github handshake with localhost and one for virtualbox to localhost.
+then create 2 ssh rsa publickeys, private keys one for github handshake with localhost and one for virtualbox to github.com.
 
 
 1) handhsake between local -> github
     internet connection in your local to talk to github.com remote server with exchage of public and
     private keys
     
-2) handshake between local -> devbox - need to generate public keys in devbox and then use this to checkout
+2) handshake between devbox->github.co, - need to generate public keys in devbox and then use this to checkout
 code.
 
 check any way to generate public keys for the virutalbox in local.
 
-if internet connection exists we can connect form localhost to github.com but for virtualbox we need the
-virtual box public key generated along with private key to make it work.
+if internet connection exists we can connect form localhost to github.com but and same in virtualbox we need the
+internet connection to handshake between devbox public key  along with private key to make it work.
 
-copy the 2 public keys of github.com and public keys of devbox where we deploy our code and build 
-in to jenkins server where all code deployed by maven.
+ssh keys should be 2 in github.com  one for handshake with localhost and one for handshake it devbox.
 https://github.com/settings/keys
+
+Important:
+==========
+
+since we connect to devbox from localhost we are generating 2 keys else when connecting to devbox and github.com
+it collides each other .
+
+since we need use git clone to connect to github.
+
+connect from local to github with handshake of public and private keys b/w local & github.com
+arun#git clone https://github.com/arunsadhasivam/Test.git  
+
+
+
+we need to connect to devbox with
+
+arun# ssh arundevbox
+
+so to avoid collision generate dummy ssh key for devbox.
 
 
 create 2 rsa publickeys:
@@ -33,7 +54,7 @@ create 2 rsa publickeys:
 
 arun# ssh-keygen -o -t rsa -b 4096 -f ~/.ssh/id_rsa
 
-arun# ssh-keygen -o -t rsa -b 4096 -f ~/.ssh/id_devbox_rsa
+arun# ssh-keygen -o -t rsa -b 4096 -f ~/.ssh/id_devbox_rsa //dummy
 
 localhost has below:
 ====================
@@ -101,15 +122,15 @@ Add generated private keys to ssh Agent:
         arun#  ssh-add /home/arun/.ssh/id_devbox_rsa
         Enter passphrase for /home/arun/.ssh/id_devbox_rsa: 
         Identity added: /home/arun/.ssh/id_devbox_rsa (arundevbox@home.com)
-           
+         
+         
+      
 
-Steps 1: generate public,private key for local-github -internet
-step 2: regenerate the private,publickey for remote devbox.
-Step 3: generate the public key and private key for remote devbox and copy the public key from devbox 
-to local system. igore private key.
-i.e copy public key generated from devbox and copy to local /home/arun/.ssh/id_dev_rsa.pub 
+Steps 1: generate public,private key for local-github -internet and add public key to https://github.com/settings/keys
+Steps 2: generate public,private key for local-devbox and add to sshagent -dummy no use just to avoid collision
+step 3: regenerate the private,publickey for remote devbox and add generated public key to https://github.com/settings/keys
 
-STEP 4: don't distrub the local /home/arun/.ssh/id_devbox_rsa private key.
+Step 3: generate the public key and private key for remote devbox in local host.
 
 since we configure 2 ssh-add (private keys) to connect to agent it wont collapse else it always mingle 
 if we have one ssh public , private keys.
@@ -118,6 +139,9 @@ try to connect to devbox already agent bind to github.com remote so it wont conn
 
     "fatal: Could not read from remote repository.
     Please make sure you have the correct access rights
+
+we have 2 keys for ssh in https://github.com/settings/keys one for localhost generate public keys
+and one generate in the devbox .
 
 
 NOTE:
