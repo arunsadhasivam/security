@@ -13,7 +13,7 @@ ssh-keygen -o -t rsa -b 4096 -f /home/.ssh/id_rsa
 STEP 2:
 =======
 
-/home/arun/.ssh
+ssh-keyscan -H 172.21.40.178>> ~ /home/arun/known_hosts
 
 Identity added: /home/arun/.ssh/id_rsa (arundevbox)
 
