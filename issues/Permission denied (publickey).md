@@ -5,7 +5,13 @@ Permission denied (publickey).
 Please make sure you have the correct access rights
 and the repository exists.
 
+Solution:
+==========
 
+cd > /User/arun/
+
+      chmod 600 authorized_keys
+      chmod -R 700 .ssh
 
 check:
 ======
